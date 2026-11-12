@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <RootNamespace>OriginalCampaign</RootNamespace>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+
+  <Import Project="..\TanksRebirth.targets" />
+
+  <ItemGroup>
+    <EmbeddedResource Include="Data\TnkGameParam.bin" LogicalName="OC.TnkGameParam.bin" />
+    <EmbeddedResource Include="Data\Maps\*.bin" LogicalName="OC.Maps.%(Filename).bin" />
+  </ItemGroup>
+
+</Project>

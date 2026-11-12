@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "Tanks Rebirth": {
+      "commandName": "Executable",
+      "executablePath": "$(TanksRebirthDir)TanksRebirth.exe",
+      "workingDirectory": "$(TanksRebirthDir)"
+    }
+  }
+}
