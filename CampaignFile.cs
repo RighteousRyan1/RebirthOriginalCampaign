@@ -16,7 +16,7 @@ public static class CampaignFile {
         meta.Description = "The original Wii Tanks campaign.";
         meta.Author = "Nintendo (2006)";
         meta.Version = "1.0";
-        meta.Tags = ["Original", "100 missions"];
+        meta.Tags = ["Random", "Faithful"];
         meta.StartingLives = 3;
         meta.HasMajorVictory = true;
 
