@@ -20,7 +20,8 @@ public readonly record struct RngMission(int Mission, bool TwoPlayer, int Map, i
         var tanks = slots.Select(s => s < 10 ? s : PRNG.Next(s / 10, s % 10 + 1)).ToArray();
 
         int[] spawns = [0, 1, 2, 3];
-        PRNG.Shuffle(spawns);
+        Span<int> spawnsSpan = new Span<int>(spawns);
+        PRNG.Shuffle(spawnsSpan);
 
         PRNG.SetState(a, b);
         return new RngMission(missionNumber, twoPlayer, map, tanks, spawns);
